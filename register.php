@@ -1,6 +1,6 @@
 <?php
-require 'includes/config.php';
-require 'includes/header.php';
+require 'incl/config.php';
+require 'incl/header.php';
 require 'vendor/autoload.php'; // Load PHPMailer
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -74,4 +74,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <button type="submit">Register</button>
 </form>
 
-<?php require 'includes/footer.php'; ?>
+<?php require 'incl/footer.php'; ?>
