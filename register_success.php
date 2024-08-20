@@ -1,6 +1,6 @@
 // /register_success.php
 <?php
-require 'includes/header.php';
+require 'incl/header.php';
 session_start();
 
 if (!isset($_SESSION['register_username'])) {
@@ -25,4 +25,4 @@ session_unset();
 </ul>
 <p>If everything looks correct, you can now <a href="login.php">log in</a>.</p>
 
-<?php require 'includes/footer.php'; ?>
+<?php require 'incl/footer.php'; ?>

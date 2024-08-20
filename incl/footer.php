@@ -1,3 +1,3 @@
-// /includes/footer.php
+// /incl/footer.php
 </body>
 </html>

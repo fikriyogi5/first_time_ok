@@ -1,7 +1,7 @@
 // /dashboard.php
 <?php
-require 'includes/config.php';
-require 'includes/header.php';
+require 'incl/config.php';
+require 'incl/header.php';
 
 session_start();
 if (!isset($_SESSION['user_id'])) {
@@ -12,4 +12,4 @@ if (!isset($_SESSION['user_id'])) {
 echo "<h2>Welcome to your Dashboard</h2>";
 echo "<p><a href='profile.php'>Go to Profile</a></p>";
 
-require 'includes/footer.php';
+require 'incl/footer.php';

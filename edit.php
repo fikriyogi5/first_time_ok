@@ -1,7 +1,7 @@
 // /edit.php
 <?php
-require 'includes/config.php';
-require 'includes/header.php';
+require 'incl/config.php';
+require 'incl/header.php';
 
 session_start();
 if (!isset($_SESSION['user_id'])) {
@@ -64,4 +64,4 @@ function closeModal() {
 </script>
 <?php endif; ?>
 
-<?php require 'includes/footer.php'; ?>
+<?php require 'incl/footer.php'; ?>

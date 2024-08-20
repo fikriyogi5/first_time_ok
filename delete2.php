@@ -1,7 +1,7 @@
 // /delete.php
 <?php
-require 'includes/config.php';
-require 'includes/header.php';
+require 'incl/config.php';
+require 'incl/header.php';
 
 session_start();
 if (!isset($_SESSION['user_id'])) {
@@ -50,4 +50,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <button type="submit">Delete Account</button>
 </form>
 
-<?php require 'includes/footer.php'; ?>
+<?php require 'incl/footer.php'; ?>

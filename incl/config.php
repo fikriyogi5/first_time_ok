@@ -1,4 +1,4 @@
-// /includes/config.php
+// /incl/config.php
 <?php
 require 'Database.php';
 require 'User.php';

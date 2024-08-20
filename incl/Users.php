@@ -28,18 +28,23 @@ class User {
         return $stmt->execute();
     }
 
-    // Login user
     public function login($username, $password) {
+        $encryptedUsername = $this->encryptUsername($username);
+
         $query = "SELECT * FROM $this->table WHERE username = :username";
         $stmt = $this->conn->prepare($query);
-
-        $encryptedUsername = $this->encryptUsername($username);
         $stmt->bindParam(':username', $encryptedUsername);
         $stmt->execute();
 
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($user && password_verify($password, $user['password'])) {
-            return $user;
+            if ($user['is_active'] == 1) {
+                // User is active, proceed with login
+                return $user;
+            } else {
+                // Account not activated
+                return "Account not activated";
+            }
         }
         return false;
     }

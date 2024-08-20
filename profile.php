@@ -1,7 +1,7 @@
 // /profile.php
 <?php
-require 'includes/config.php';
-require 'includes/header.php';
+require 'incl/config.php';
+require 'incl/header.php';
 
 session_start();
 if (!isset($_SESSION['user_id'])) {
@@ -30,4 +30,4 @@ if ($userData) {
     echo "User not found.";
 }
 
-require 'includes/footer.php';
+require 'incl/footer.php';
