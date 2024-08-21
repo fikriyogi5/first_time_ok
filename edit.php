@@ -31,12 +31,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// Fetch current user data
-$query = "SELECT * FROM users WHERE id = :id";
-$stmt = $db->prepare($query);
-$stmt->bindParam(':id', $userId);
-$stmt->execute();
-$userData = $stmt->fetch(PDO::FETCH_ASSOC);
+// // Fetch current user data
+// $query = "SELECT * FROM users WHERE id = :id";
+// $stmt = $db->prepare($query);
+// $stmt->bindParam(':id', $userId);
+// $stmt->execute();
+// $userData = $stmt->fetch(PDO::FETCH_ASSOC);
+
+// Usage example:
+// $userModel = new User($db);
+$userData = $userModel->getUserData($userId);
 ?>
 
 <h2>Edit Profile</h2>

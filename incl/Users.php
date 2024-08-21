@@ -74,4 +74,13 @@ class User {
 
         return $stmt->execute();
     }
+
+    // Fetch user details by ID
+    public function getUserData($id) {
+        $query = "SELECT * FROM $this->table WHERE id = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }
